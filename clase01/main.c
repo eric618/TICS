@@ -5,15 +5,16 @@ int main(int argc, char **argv) {
   int y;
   char c[] = "Xasd";
   char nombre[20];
-  char aux[];
 
   printf("%i %i\n", x, x);
   printf("%s\n", c);
   printf("Hola!\n");
-  scanf("%i", &y);
-  printf("El valor ingresado fue %i", y);
-  scanf("%s", nombre);
-  printf("El valor ingresado fue %s", nombre);
+  // scanf("%i", &y);
+  // printf("El valor ingresado fue %i", y);
+  // scanf("%s", nombre);
+  // printf("El valor ingresado fue %s", nombre);
 
-    return 0;
+  printf("%s %s %c\n", argv[0], argv[1], argv[0][2]);
+  printf("%i", argc);
+  return 0;
 }
