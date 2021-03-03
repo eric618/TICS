@@ -1,20 +1,11 @@
 #include <stdio.h>
-
+struct cuenta_banco {
+  char nombre[80];
+  float saldo;
+  long int cuenta;
+  char RUT[15];
+};
 int main(int argc, char **argv) {
-  int x = 5;
-  int y;
-  char c[] = "Xasd";
-  char nombre[20];
-
-  printf("%i %i\n", x, x);
-  printf("%s\n", c);
-  printf("Hola!\n");
-  // scanf("%i", &y);
-  // printf("El valor ingresado fue %i", y);
-  // scanf("%s", nombre);
-  // printf("El valor ingresado fue %s", nombre);
-
-  printf("%s %s %c\n", argv[0], argv[1], argv[0][2]);
-  printf("%i", argc);
+  struct cuenta_banco cta1, cta2, cta3;
   return 0;
 }
