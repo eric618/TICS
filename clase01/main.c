@@ -17,6 +17,8 @@ int main(int argc, char **argv) {
   printf("%li\n", cta1.cuenta);
   printf("%s\n", cta1.RUT);
 
+  cta2 = cta1;
+
   printf("%s\n", cta2.nombre);
   printf("%f\n", cta2.saldo);
   printf("%li\n", cta2.cuenta);
