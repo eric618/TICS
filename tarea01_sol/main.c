@@ -14,5 +14,6 @@ int main(int argc, char* argv[]) {
     return 2;
   }
   print_avg_from_csv(f);
+  fclose(f);
   return 0;
 }
