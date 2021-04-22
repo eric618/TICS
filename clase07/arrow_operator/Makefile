@@ -8,6 +8,6 @@ all: $(OBJS)
 main.o: main.c
 	$(CC) -c main.c
 			
-Clean:
+clean:
 	rm -f $(OBJS) main *~
 
