@@ -6,20 +6,33 @@ typedef struct p {
   struct p* siguiente;
 } nodo;
 
-int main(int argc, char* argv[]) {
-  nodo* prev = malloc(sizeof(nodo));
-  ;
-  nodo* sgte;
+typedef struct l {
+  nodo* head;
+} list;
 
-  for (int i = 10; i < 20; i++) {
-    prev->dato = i;
-    sgte = malloc(sizeof(nodo));
-    prev->siguiente = sgte;
-    sgte->siguiente = NULL;
+int main(int argc, char* argv[]) {
+  list* lista = malloc(sizeof(list));
+  nodo* current;
+  lista->head = NULL;
+  for (int i = 0; i < 10; i++) {
+    if (lista->head == NULL) {
+      lista->head = malloc(sizeof(nodo));
+      lista->head->dato = i;
+      lista->head->siguiente = NULL;
+      current = lista->head;
+    } else {
+      current->siguiente = malloc(sizeof(nodo));
+      current = current->siguiente;
+      current->dato = i;
+      current->siguiente = NULL;
+    }
   }
 
-  printf("%i\n", sgte->dato);
-
-  printf("holamundo!\n");
+  current = lista->head;
+  while (current != NULL) {
+    printf("%i - ", current->dato);
+    current = current->siguiente;
+  }
+  printf("\n");
   return 0;
 }
