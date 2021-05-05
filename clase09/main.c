@@ -9,10 +9,10 @@ int main(int argc, char* argv[]) {
   add_node(lista, 46456.0, 1.0);
   print_list(lista);
 
-  delete_node(lista, 2);
+  delete_node_ptr(lista, 2);
   print_list(lista);
 
-  delete_node(lista, 2);
+  delete_node_ptr(lista, 2);
   print_list(lista);
 
   delete_node(lista, 0);
